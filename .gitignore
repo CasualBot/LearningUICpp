@@ -59,3 +59,8 @@ test/test_runner
 **/*.sln
 **/vcpkg-manifest-install.log
 **/vcpkg_installed/*
+**/*.vcxproj.user
+**/*.dir
+**/Debug/
+**/*.ini
+**/x64
