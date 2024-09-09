@@ -3,6 +3,11 @@
 #
 cmake_minimum_required(VERSION 3.10)
 
+
+if(DEFINED ENV{VCPKG_ROOT})
+    set(CMAKE_TOOLCHAIN_FILE $ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake CACHE STRING "")
+endif()
+
 project ("LearningUICpp")
 
 find_package(imgui CONFIG REQUIRED)
@@ -19,6 +24,6 @@ endif()
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET LearningUICpp PROPERTY CXX_STANDARD 20)
-endif()
 
+endif()
 # TODO: Add tests and install targets if needed.

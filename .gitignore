@@ -54,3 +54,8 @@ lib/*
 bin/*
 test/test_runner
 **/.vs
+**/*.vcxproj
+**/*.vcxproj.filters
+**/*.sln
+**/vcpkg-manifest-install.log
+**/vcpkg_installed/*
