@@ -31,7 +31,7 @@
 #pragma comment(lib,"d3d12.lib")
 #pragma comment(lib, "dxgi.lib")
 
-#include "BaseApp.h"
+#include "Window.h"
 
 struct FrameContext
 {
@@ -86,7 +86,7 @@ int main(int, char**)
     }
 
     // Show the window
-    ::ShowWindow(hwnd, SW_SHOWDEFAULT);
+    ::ShowWindow(hwnd, SW_HIDE);
     ::UpdateWindow(hwnd);
 
     // Setup Dear ImGui context
@@ -97,7 +97,7 @@ int main(int, char**)
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
     io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;         // Enable Docking
     io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;       // Enable Multi-Viewport / Platform Windows
-    //io.ConfigViewportsNoAutoMerge = true;
+    io.ConfigViewportsNoAutoMerge = true;
     //io.ConfigViewportsNoTaskBarIcon = true;
 
     // Setup Dear ImGui style
@@ -169,7 +169,8 @@ int main(int, char**)
         ImGui::NewFrame();
 
         // Load Base App UI
-        BaseApp::Render(io);
+        Window *mainWindow = new Window(io);
+        mainWindow->Render();
 
         // Rendering
         ImGui::Render();
