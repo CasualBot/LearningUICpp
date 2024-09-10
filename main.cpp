@@ -172,6 +172,11 @@ int main(int, char**)
         Window *mainWindow = new Window(io);
         mainWindow->Render();
 
+		if (mainWindow == nullptr)
+		{
+			done = true;
+		}
+
         // Rendering
         ImGui::Render();
 
