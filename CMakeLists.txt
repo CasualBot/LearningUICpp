@@ -11,8 +11,14 @@ endif()
 project ("LearningUICpp")
 
 find_package(imgui CONFIG REQUIRED)
+file(GLOB LearningUICpp_src 
+    "*.h"
+    "*.cpp"
+)
 # Add source to this project's executable.
-add_executable (LearningUICpp "main.cpp")
+add_executable (LearningUICpp ${LearningUICpp_src})
+
+target_include_directories(LearningUICpp PRIVATE ${CMAKE_HOME_DIRECTORY})
 
 target_link_libraries(LearningUICpp PRIVATE imgui::imgui)
 

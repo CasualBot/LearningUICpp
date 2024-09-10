@@ -16,6 +16,7 @@
 #include <d3d12.h>
 #include <dxgi1_4.h>
 #include <tchar.h>
+#include "Window.h"
 
 #ifdef _DEBUG
 #define DX12_ENABLE_DEBUG_LAYER
@@ -31,7 +32,6 @@
 #pragma comment(lib,"d3d12.lib")
 #pragma comment(lib, "dxgi.lib")
 
-#include "Window.h"
 
 struct FrameContext
 {
