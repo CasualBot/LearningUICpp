@@ -4,13 +4,11 @@ This repo is a base project using CMake and vcpkg to install imgui and generate 
 
 See the [Dear ImGui git repository](https://github.com/ocornut/imgui) for information on imgui.
 
-## Getting Started
+## Goal(s)
 
-1. Download and install CMake 
-1. Download and install vcpkg
-1. Download and install Visual Studio 2022
-1. Clone repo and `cd LearningUICpp`
-1. run `cmake . build`
-1. Open `LearningUICpp.sln` inside the `/out/build/` dir
-1. Right click `LearningUICpp.sln` in Solution Explorer -> Select `Set as Startup Project`
-1. Run with `F5` or `Ctrl+F5`
+Learn UI principals and foundations using ImGui as the base
+
+## To Do
+- [ ] Create new Window class for creating new ImGui elements
+- [ ] Migrate ImGui demo code to use new window class
+- [ ] Create a to do "app"
